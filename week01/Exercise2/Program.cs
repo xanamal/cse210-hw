@@ -31,6 +31,30 @@ class Program
            letter = "F";
        }
 
+       int lastDigit = grade % 10;
+
+       if (letter != "f" && letter != "F")
+       {
+           if (lastDigit >= 7)
+           {
+               letter += "+";
+           }
+           else if (lastDigit <= 3)
+           {
+               letter += "-";
+           }
+       }
+
        Console.WriteLine($"Your letter grade is: {letter}");
-    }
+
+    if (grade >= 70)
+       {
+           Console.WriteLine("Congratulations! You passed the class.");
+       }
+       else
+       {
+           Console.WriteLine("Sorry, you did not pass the class.");
+       }
+
+   }
 }
