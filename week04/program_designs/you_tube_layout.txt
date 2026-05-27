@@ -1,0 +1,69 @@
++----------------------------------+
+|            Program.cs           |
++----------------------------------+
+| - Creates Video objects         |
+| - Creates Comment objects       |
+| - Adds comments to videos       |
+| - Stores videos in a list       |
+| - Displays all information      |
++----------------------------------+
+| + Main()                        |
++----------------------------------+
+
+Description:
+Program.cs controls the flow of the program. It creates all of the
+Video and Comment objects, connects them together, and displays the
+final output.
+
+Why it is important:
+Program.cs acts as the controller of the program. Instead of storing
+all information directly inside one file, it tells the classes what
+to do. This keeps the program organized and easier to manage.
+
+                creates
+                    |
+                    V
+
++----------------------------------+
+|              Video              |
++----------------------------------+
+| - title : string                |
+| - author : string               |
+| - length : int                  |
+| - comments : List<Comment>      |
++----------------------------------+
+| + GetCommentCount() : int       |
+| + DisplayVideoInfo()            |
++----------------------------------+
+
+Video Class Description:
+The Video class represents one YouTube video. It stores the title,
+author, video length, and a list of comments connected to that video.
+It can also count and display comments.
+
+Why it is important:
+The Video class groups all video-related information together into one
+object. This demonstrates abstraction because the video manages its
+own information and comments instead of the main program handling
+everything manually.
+                contains
+                    |
+                    V
+
++----------------------------------+
+|             Comment             |
++----------------------------------+
+| - name : string                 |
+| - text : string                 |
++----------------------------------+
+| + DisplayComment()              |
++----------------------------------+
+
+Comment Class Description:
+The Comment class represents one individual comment left on a video.
+It stores the commenter's name and the text of the comment.
+
+Why it is important:
+The Comment class keeps comment information separate from the Video
+class. This makes the program cleaner, easier to understand, and
+easier to expand later if more features are added.

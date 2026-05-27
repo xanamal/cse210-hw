@@ -1,0 +1,79 @@
++----------------------------------+
+|             Customer            |
++----------------------------------+
+| - name : string                 |
+| - address : Address             |
++----------------------------------+
+| + LivesInUSA() : bool           |
++----------------------------------+
+
+Customer Class
+
+The Customer class represents the person placing the order.
+
+It will store the customer’s name and address. It will also check whether the customer lives in the USA.
+
+This is significant because the shipping cost depends on whether the customer lives in the USA or outside the USA. The customer class helps the program make that decision.
+
+                has
+                 |
+                 V
+
++----------------------------------+
+|             Address             |
++----------------------------------+
+| - street : string               |
+| - city : string                 |
+| - state : string                |
+| - country : string              |
++----------------------------------+
+| + GetFullAddress() : string     |
++----------------------------------+
+
+Address Class
+
+The Address class represents the customer’s mailing address.
+
+It will store the street address, city, state or province, and country. It will also return the full address as a formatted string.
+
+This is significant because address information belongs together. Keeping it in its own class makes the program cleaner and makes it easier to print shipping labels correctly.
+
+
++----------------------------------+
+|             Product             |
++----------------------------------+
+| - name : string                 |
+| - productId : string            |
+| - price : double                |
+| - quantity : int                |
++----------------------------------+
+| + GetTotalCost() : double       |
++----------------------------------+
+
+Product Class
+
+The Product class represents one item being purchased.
+
+It will store the product name, product ID, price, and quantity. It will also calculate the total cost for that product by multiplying the price by the quantity.
+
+This is significant because each product should be responsible for knowing its own cost. This keeps the code organized and prevents the main program from having to calculate every product manually.
+
+
++----------------------------------+
+|              Order              |
++----------------------------------+
+| - products : List<Product>      |
+| - customer : Customer           |
++----------------------------------+
+| + GetPackingLabel()             |
+| + GetShippingLabel()            |
+| + CalculateTotalCost()          |
++----------------------------------+
+
+Order Class
+
+The Order class represents one customer’s full order. It will store the customer and a list of products they are buying.
+
+This class will calculate the total cost of the order, create the packing label, and create the shipping label.
+
+This is significant because the order is the main object that connects everything together. Instead of putting all the logic in Program.cs, the Order class handles order-related actions.
